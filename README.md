@@ -2,7 +2,7 @@
  Passwword generates is website that create random password based on user-selected criteria. This sites feature by dynamically updated HTML and CSS powered by JavaScript code.
 
 
-## View THis Page [https://rumardas.github.io/portfolio/]
+## View THis Page [https://rumardas.github.io/password_generator/]
 
 ## Application Uses in this Projects
 * Javascript
@@ -21,7 +21,7 @@
 
 ## Pages  view
 ![Test Image 1](./assets/page_1.png)
-
+![Test Image 2](./assets/page_2.png)
 ## Font Decoration 
 
 For font decoration uses I used google font 
