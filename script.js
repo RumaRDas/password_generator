@@ -32,7 +32,8 @@ var hidden = false;
 const hideBox =document.querySelector('#hide-option');
 hideBox.addEventListener('click', function(e){
     if(hidden){
-      criteriaList.style.display = "none";      
+      criteriaList.style.display = "none";
+       
     }else{
       criteriaList.style.display ="initial";
       hideBox.style.display += "none";
@@ -42,7 +43,18 @@ hideBox.addEventListener('click', function(e){
 // Assignment Code
 // Write password to the #password input
 function writePassword() {
+  userPassword ="";
+  passwordType ="";
+//inputplength = parseInt(inputplength.value);
 
+if (inputplength.value >=8 && inputplength.value <=128){
+  plength = parseInt(inputplength.value);
+  console.log(plength);
+
+  
+}else{
+  alertbox.innerHTML="Your Input number is not wright"
+}
 
 }
 
