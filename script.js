@@ -51,7 +51,7 @@ if (inputplength.value >=8 && inputplength.value <=128){
   plength = parseInt(inputplength.value);
   console.log(plength);
 // for use uppercase in passwordType
-  if( inputUppercase.checked){
+ if( inputUppercase.checked){
     passwordType += uppercase;
   console.log(passwordType);
 }
@@ -70,6 +70,7 @@ if(inputsymbol.checked){
 passwordType+=symbols;
 console.log(passwordType);
 }
+
 // for finding out the password type according to user choices:
 for (let i = 0; i < plength; i++) {
   userPassword += passwordType.charAt(
@@ -78,11 +79,20 @@ for (let i = 0; i < plength; i++) {
   }
   //if all criteria are fullfill password will show in textarea
   passwordFeild.innerHTML = userPassword;
+  alertbox.innerHTML= "";
   console.log(userPassword)
-}else{
+
+}else if(inputplength.value <= 8){
   //if all criteria are not full s password will not generate
-  alertbox.innerHTML="Your Input number is not wright"
+   alertbox.innerHTML="Your length is too low";
+
 }
+else{
+  //if all criteria are not full s password will not generate
+   alertbox.innerHTML="Your length is too high";
+
+}
+
 
 }
 // adding click evevt on id="generate" button and giving function write Password to get the Password
