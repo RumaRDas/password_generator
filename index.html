@@ -20,15 +20,16 @@
     <header>
       <!--Page Header-->
       <div id="page-banner">
-        <h1 class="title">JavaScript Password Generatot</h1>
+        <h1 class="title">Do you Want to Generate a Password</h1>
     </header>
-    <!--Hide check box-->
+    <!--Hide Button-->
+		
     <div id="hide-option">
-      <input type="checkbox" id="hide" />
-      <label for="hide"><h4>Do you Want to Generate a Password</h4></label>
+      <input class="hide genbtn" type="button"  value="I Want to Generate a Password" on/>
     </div>
+   
     <!--password generator -->
-    <div id="pass-gen">
+    <div id="pass-gen" style="display:none">
       <h2> Select a length for your password</h2>
       <form id="length">
         <div class="alert" id="alert"><span class="message" id="message"></div>
@@ -53,13 +54,13 @@
         <li>
           <div class="criteria">
             <input type="checkbox" id="number" />
-            <label for="number" class="check-box">Use Lowercase Characters</label>
+            <label for="number" class="check-box">Use Numbers</label>
           </div>
         </li>
         <li>
           <div class="criteria">
             <input type="checkbox" id="symbols" />
-            <label for="symbols" class="check-box">Use Lowercase Characters</label>
+            <label for="symbols" class="check-box">Use Special Characters</label>
           </div>
         </li>
       </ul>
