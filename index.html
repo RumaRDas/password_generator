@@ -24,16 +24,16 @@
     </header>
     <!--Hide Button-->
 		
-    <div id="hide-option">
-      <input class="hide genbtn" type="button"  value="I Want to Generate a Password" on/>
+    <div id="hide-option" >
+      <input class="hide genbtn" type="button"  value="Click to Generate a Password" on/>
     </div>
    
     <!--password generator -->
     <div id="pass-gen" style="display:none">
       <h2> Select a length for your password</h2>
-      <form id="length">
+      <form id="lengthform">
         <div class="alert" id="alert"><span class="message" id="message"></div>
-        <input type="number" placeholder="Add a length...." />
+        <input id="length" type="number" placeholder="Add a length...." />
       </form>
       <!--Criteria Selection check box-->
       <div id="criteria-list">
@@ -42,7 +42,7 @@
         <li>
           <div class="criteria">
             <input type="checkbox" id="uppercase" />
-            <label for="uppercase" class="check-box">Use Uppercase Characters</label>
+            <label for="uppercase" class="check-box"><span class="checkbox">Uppercase Characters</span> </label>
           </div>
         </li>
         <li>

@@ -74,7 +74,7 @@ body{
   border-color:  rgb(250, 153, 7);
 }
 
-#criteria-list input[type="checkbox"] {
+input[type="checkbox"] {
   visibility: hidden;
 }
 label.check-box{
