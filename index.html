@@ -4,6 +4,8 @@
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--fontAwsom css link-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,7 +15,7 @@
 <title>Password Generator</title>
 </head>
 
-<body>
+<body class="bg">
   <div id="wrapper">
     <header>
       <!--Page Header-->
@@ -23,42 +25,52 @@
     <!--Hide check box-->
     <div id="hide-option">
       <input type="checkbox" id="hide" />
-      <label for="hide">Do you Want to Generate a Password</label>
+      <label for="hide"><h4>Do you Want to Generate a Password</h4></label>
     </div>
     <!--password generator -->
-    <div class="pass-gen">
+    <div id="pass-gen">
       <h2> Select a length for your password</h2>
       <form id="length">
         <div class="alert" id="alert"><span class="message" id="message"></div>
-        <input type="text" placeholder="Add a length...." />
+        <input type="number" placeholder="Add a length...." />
       </form>
       <!--Criteria Selection check box-->
+      <div id="criteria-list">
       <h2> Select Criteria for your password</h2>
       <ul>
         <li>
-          <input type="checkbox" id="uppercase" />
-          <label for="uppercase"><span class="checkbox">Use Uprcase Characters</span ></label>
+          <div class="criteria">
+            <input type="checkbox" id="uppercase" />
+            <label for="uppercase" class="check-box">Use Uppercase Characters</label>
+          </div>
         </li>
         <li>
+          <div class="criteria">
           <input type="checkbox" id="lowercase" />
-          <label for="lowercase"> <span class="checkbox">Use Lowercase Characters</span > </label>
+          <label for="lowercase" class="check-box">Use Lowercase Characters</label>
+        </div>
         </li>
         <li>
-          <input type="checkbox" id="numbers" />
-          <label for="numbers"><span class="checkbox">Use Numbers Characters</span>  </label>
+          <div class="criteria">
+            <input type="checkbox" id="number" />
+            <label for="number" class="check-box">Use Lowercase Characters</label>
+          </div>
         </li>
         <li>
-          <input type="checkbox" id="symbols" />
-          <label for="symbols"> <span class="checkbox">Use Special Character Characters</span></label>
+          <div class="criteria">
+            <input type="checkbox" id="symbols" />
+            <label for="symbols" class="check-box">Use Lowercase Characters</label>
+          </div>
         </li>
       </ul>
+    </div>
       <div id="output-password">
         <!--Output text area-->
         <textarea
         readonly id="password" placeholder="Your Password" aria-label="Generated Password"
       ></textarea>
       <!--button for password generator-->
-      <button id="generate" class="btn">Generate Password</button>
+      <button id="generate" class=" genbtn">Generate Password</button>
       </div>
      <!--footer -->
       <div class="footer">

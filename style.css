@@ -1,137 +1,129 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+body{
+  font-family: Tahoma;
+  color: #444;
+}
+.bg{
+  background-image: url("./assets/pic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-html,
-body,
-.wrapper {
-  height: 100%;
-  margin: 0;
+#wrapper{
+  width: 90%;
+  max-width: 760px;
+  margin: 20px auto;  
+  border-radius: 6px;
+  box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  padding: 0 0 20px;
+  overflow: hidden;
+  border: 1px solid lightgray;
+  background-color:   rgb(248, 243, 236);
+}
+#page-banner{
+  background: rgb(250, 153, 7); 
+  padding: 20px ;
+}
+#page-banner h1{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+#length{
+  text-align: center;
+}
+#pass-gen h2{
+  text-align:center ;
+}
+#pass-gen input{
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto; 
+  display: block;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #444;
+}
+#hide-option{
+  margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 10px;
+   text-align: center;
+   color: rgb(250, 153, 7);
+ }
+ #criteria-list h2{
+   text-align: center;
+ }
+
+#criteria-list ul{
+  list-style-type: none;
   padding: 0;
 }
-
-body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+#criteria-list li{
+  padding-left: 30px;
+  border-left: 12px solid rgb(153, 145, 145);;
+  margin: 3px 3px;
+  margin-left: 50px;
+}
+#criteria-list li:hover{
+  border-color:  rgb(250, 153, 7);
 }
 
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+#criteria-list input[type="checkbox"] {
+  visibility: hidden;
 }
-
-header {
+label.check-box{
+  position: relative;
+}
+label.check-box:before{
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  left: -24px;
+  top: 0;
+  border: 0.5px solid lightgray;
+  position: absolute;
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0, 0.82, 1, 1.81);
+}
+input[type="checkbox"]:checked + label.check-box:before {
+  content:'';
+  font-size: 0.8rem;
   text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  background:rgb(250, 153, 7);
+  transition: all 0.3s cubic-bezier(0, 0.82, 1, 1.81);
 }
 
-.card {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
-  font-size: 18px;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 30px 40px;
-}
-
-.card-header::after {
-  content: " ";
+.genbtn{
+  background:  rgb(250, 153, 7);
+  width: 90%;
+  border: 0;
+  margin: 10px auto; 
   display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-body {
-  min-height: 100px;
-}
-
-.card-footer {
-  text-align: center;
-}
-
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.btn {
-  border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
-  cursor: pointer;
-}
-
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
-}
-
-#password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: block;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
+  color: white;
+  background: #fd9d08;
+  border-radius: 10px;
+  padding: 10px;
   margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  transition: all 0.3s ease;
+}
+
+.genbtn:hover{
+  background: #333;
+}
+ #password{
+  text-align: center;
+  width: 90%;
+  margin: 10px auto; 
+  display: block;
+  border: 1px solid #ddd;
   border-radius: 6px;
-  resize: none;
-  overflow: hidden;
-}
-
-@media (max-width: 690px) {
-  .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
-  }
-
-  #password {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
-}
+  margin-top: 20px;
+  padding: 20px 2px 2px 8px;
+  border-radius: 5px;
+  justify-content: space-between;
+ }
