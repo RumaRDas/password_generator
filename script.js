@@ -45,37 +45,47 @@ hideBox.addEventListener('click', function(e){
 function writePassword() {
   userPassword ="";
   passwordType ="";
-//inputplength = parseInt(inputplength.value);
 
+//only password will work between 8 to 128 number
 if (inputplength.value >=8 && inputplength.value <=128){
   plength = parseInt(inputplength.value);
   console.log(plength);
-
+// for use uppercase in passwordType
   if( inputUppercase.checked){
     passwordType += uppercase;
   console.log(passwordType);
 }
-
+// for use Lowercase in passwordType
 if(inputLowercase.checked){
 passwordType += lowercase;
 console.log(passwordType);
 }
+// for use numbers in passwordType
 if(inputnumber.checked){
-passwordType+=number;
+passwordType+=numbers;
 console.log(passwordType);
 }
+// for use Special character in passwordType
 if(inputsymbol.checked){
 passwordType+=symbols;
 console.log(passwordType);
 }
-
-
+// for finding out the password type according to user choices:
+for (let i = 0; i < plength; i++) {
+  userPassword += passwordType.charAt(
+    Math.floor(Math.random() * passwordType.length)
+  );
+  }
+  //if all criteria are fullfill password will show in textarea
+  passwordFeild.innerHTML = userPassword;
+  console.log(userPassword)
 }else{
+  //if all criteria are not full s password will not generate
   alertbox.innerHTML="Your Input number is not wright"
 }
 
 }
-
+// adding click evevt on id="generate" button and giving function write Password to get the Password
 generateBtn.addEventListener("click", writePassword);
 
 /*
