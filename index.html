@@ -20,75 +20,74 @@
     <header>
       <!--Page Header-->
       <div id="page-banner">
-        <h1 class="title">Do you Want to Generate a Password</h1>
+        <h1 class="title">Do you want to Generate a Password</h1>
     </header>
     <!--Hide Button-->
-		
-    <div id="hide-option" >
-      <input class="hide genbtn" type="button"  value="Click to Generate a Password" on/>
+
+    <div id="hide-option">
+      <input class="hide genbtn" type="button" value="Click to Generate a Password" on />
     </div>
-   
+
     <!--password generator -->
     <div id="pass-gen" style="display:none">
-      <h3> Select a length for your password</h3>
+      <h3> Select Password Length (8 to 128)</h3>
       <form id="lengthform">
         <div class="alert" id="alert"><span class="message" id="message"></div>
         <input id="length" type="number" placeholder="Add a length...." />
       </form>
       <!--Criteria Selection check box-->
       <div id="criteria-list">
-      <h3> Select Criteria for your password</h3>
-      <ul>
-        <li>
-          <div class="criteria">
-            <input type="checkbox" id="uppercase" />
-            <label for="uppercase" class="check-box"><span class="checkbox">Use Uppercase Characters</span> </label>
-          </div>
-        </li>
-        <li>
-          <div class="criteria">
-          <input type="checkbox" id="lowercase" />
-          <label for="lowercase" class="check-box"><span class="checkbox">Use Lowercase Characters</span></label>
-        </div>
-        </li>
-        <li>
-          <div class="criteria">
-            <input type="checkbox" id="number" />
-            <label for="number" class="check-box">Use Numbers</label>
-          </div>
-        </li>
-        <li>
-          <div class="criteria">
-            <input type="checkbox" id="symbols" />
-            <label for="symbols" class="check-box">Use Special Characters</label>
-          </div>
-        </li>
-      </ul>
-    </div>
+        <h3> Select Criteria for your password</h3>
+        <ul>
+          <li>
+            <div class="criteria">
+              <input type="checkbox" id="uppercase" />
+              <label for="uppercase" class="check-box"><span class="checkbox">Use Uppercase Characters</span> </label>
+            </div>
+          </li>
+          <li>
+            <div class="criteria">
+              <input type="checkbox" id="lowercase" />
+              <label for="lowercase" class="check-box"><span class="checkbox">Use Lowercase Characters</span></label>
+            </div>
+          </li>
+          <li>
+            <div class="criteria">
+              <input type="checkbox" id="number" />
+              <label for="number" class="check-box">Use Numbers</label>
+            </div>
+          </li>
+          <li>
+            <div class="criteria">
+              <input type="checkbox" id="symbols" />
+              <label for="symbols" class="check-box">Use Special Characters</label>
+            </div>
+          </li>
+        </ul>
+      </div>
       <div id="output-password">
         <!--Output text area-->
-        <textarea
-        readonly id="password"  class="password-text"placeholder="Your Password" aria-label="Generated Password"
-      ></textarea>
-      <!--button for password generator-->
-      <button id="generate" class=" genbtn">Generate Password</button>
+        <textarea readonly id="password" class="password-text" placeholder="Your Password"
+          aria-label="Generated Password"></textarea>
+        <!--button for password generator-->
+        <button id="generate" class=" genbtn">Generate Password</button>
       </div>
-     <!--footer -->
+      <!--footer -->
       <div class="footer">
-       
+
       </div>
     </div>
 
-  <!-- Optional JavaScript -->
-  <script src="script.js"></script>
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <script src="script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
 </body>
