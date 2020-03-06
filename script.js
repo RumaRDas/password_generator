@@ -51,7 +51,25 @@ if (inputplength.value >=8 && inputplength.value <=128){
   plength = parseInt(inputplength.value);
   console.log(plength);
 
-  
+  if( inputUppercase.checked){
+    passwordType += uppercase;
+  console.log(passwordType);
+}
+
+if(inputLowercase.checked){
+passwordType += lowercase;
+console.log(passwordType);
+}
+if(inputnumber.checked){
+passwordType+=number;
+console.log(passwordType);
+}
+if(inputsymbol.checked){
+passwordType+=symbols;
+console.log(passwordType);
+}
+
+
 }else{
   alertbox.innerHTML="Your Input number is not wright"
 }

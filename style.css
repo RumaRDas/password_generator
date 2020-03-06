@@ -142,3 +142,7 @@ input[type="checkbox"]:checked + label.check-box:before {
   border-radius: 5px;
   justify-content: space-between;
  }
+ .password-text{
+   color:#fd9d08;
+   font-size: 35px;
+ }
