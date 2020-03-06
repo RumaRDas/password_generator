@@ -1,50 +1,52 @@
 
 //event building
-// declearing the criteria for ption var lowercase ="abcdefghijklmnopqrstuvwxyz";
+// declearing var for  criteria for selection
 var uppercase ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowercase ="abcdefghijklmnopqrstuvwxyz";
 var numbers ="0123456789";
 var symbols ="!@#$%^&*()_+~`|][{}:;'?/>.<,=-[";
 
 
-var generateBtn =document.getElementById("generate");
-var passwordFeild = document.getElementById("#password");
-//declearing the userinput
-var inputUppercase = document.getElementById("#uppercase");
-var inputLowercase = document.getElementById("#lowercase");
-var inputnumber = document.getElementById("#number");
-var inpusymbol = document.getElementById("#symbols");
-var lengthInput = document.getElementById("#length");
+//var generateBtn =document.getElementById("generate");
+var passwordFeild = document.querySelector("#password");
+//taking a var for the user input
+var inputUppercase = document.querySelector("#uppercase");
+var inputLowercase = document.querySelector("#lowercase");
+var inputnumber = document.querySelector("#number");
+var inputsymbol = document.querySelector("#symbols");
+var inputplength = document.querySelector("#length");
+//var for  password finding
 var generateBtn = document.querySelector("#generate");
-
+var alertbox = document.querySelector("#alert");
 var userPassword;
 var passwordType;
 var plength;
 // getting  usrep
-// selecting criteria list making a new const
+// selecting var criteria list making a new const
 const criteriaList = document.querySelector('#pass-gen');
+//hide button adding margin in
 const hideButton = document.querySelector("#hide-option").style.margin = "80px 10px 80px 10px";
 var hidden = false;
+
  // for hiding the criteria to view
+const hideBox =document.querySelector('#hide-option');
+hideBox.addEventListener('click', function(e){
+    if(hidden){
+      criteriaList.style.display = "none";      
+    }else{
+      criteriaList.style.display ="initial";
+      hideBox.style.display += "none";
+    }
+});
 
-  //for password length
- 
-  plength = Number(lengthInput.value);
-  for (let i = 0; i < plength; i++) {
-          userPassword += passwordType.charAt(
-            Math.floor(Math.random() * passwordType.length)
-          ); 
-          if (inputplength >=8 && inputplength <=128){
-            document.getElementById("#password").innerHTML = userPassword;
-   }else{
-     const alertbox = document.getElementById('#alert');
-     alertbox.innerHTML =" your length input is not Wright";
-   }
-   }
-
-})
+// Assignment Code
+// Write password to the #password input
+function writePassword() {
 
 
+}
+
+generateBtn.addEventListener("click", writePassword);
 
 /*
 // Assignment Code
